@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ESP8266 DHT22 D1 R1 TEST</title>
+</head>
+<body>
+<h1 style="text-align: center;"> ESP8266 D1 R1 DHT22 TEST</h1>
+<hr style="margin-left: 20px; margin-right: 20px;">
+<br>
+<!-- <form method="post" action="/insertTest">
+      <input type="text" name="humidity" required>
+      <input type="text" name="temperature" required>
+      <input type='submit' value="test" onclick='this.form.action="/insertTest"'> &nbsp
+</form> -->
+<form method="post" target='targetURL'>
+  <button style="margin-left: 50px;" type="submit" name="sensorData" formaction="/sensorData/insert"> 현재 데이터 저장 </button>
+<!-- <button type="submit" name="sensorData" formaction="/sensorData/current"> 현재 센서 데이터 확인 </button> -->
+</form>
+<br>
+<hr style="margin-left: 20px; margin-right: 20px;">
+<iframe name=targetURL class="iframe-preview center" width="60%" height="500" style="border:none; margin-left: 50px;">
+</body>
+</html>

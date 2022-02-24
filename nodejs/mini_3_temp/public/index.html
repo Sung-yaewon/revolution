@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>mini project 3</title>
+</head>
+<body>
+<h1 style="text-align: center;"> MINI PROJECT 3 : TEST</h1>
+<hr style="margin-left: 20px; margin-right: 20px;">
+  <h4 style="margin-left: 60px;"> Monitoring API</h4>
+<hr style="margin-left: 20px; margin-right: 20px;">
+<br>
+<form method='post' style="margin-left: 60px;" action="/api/users/userBody" name='userForm' target='targetURL'>
+
+  <input type='button' value="전체 데이터 확인" onclick='document.targetURL.location.href="/api/anywhereFarm"'>
+  <p>
+  사용자명 : <input type="text" size="30" name="username"> <br>
+  생장일차 : <input type="text" size="30" name="date"> <br>
+  <p>
+  <input type="button" value="사용자별 데이터 확인_TEST" onclick='document.targetURL.location.href="/api/anywhereFarm/"+document.userForm.username.value'>
+  <input type="button" value="사용자별 데이터 확인" onclick='document.targetURL.location.href="/api/anywhereFarm/name/"+document.userForm.username.value'>
+  <input type="button" value="일차별 데이터 확인_TEST" onclick='document.targetURL.location.href="/api/anywhereFarm/date/"+document.userForm.date.value'>
+<br><br>
+<br><br>
+</form>
+<hr style="margin-left: 20px; margin-right: 20px;">
+
+<iframe name=targetURL class="iframe-preview center" width="90%" height="500"
+style="border:none; margin-left: 50px;" src="http://52.78.234.238:3000/api/anywhereFarm">
+</body>
+</html>

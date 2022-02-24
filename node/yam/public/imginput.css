@@ -1,0 +1,104 @@
+<!-- imginput.css 변경 -->
+html {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    margin-top: 0;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.image-upload {
+    margin-top: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#chooseFile {
+    visibility: hidden;
+}
+
+.fileContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputbox {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding:3px;
+    width: 200px;
+    height: 20px;
+    font-size: 10px;
+    border-radius: 15px;
+}
+
+.fileInput {
+
+    display: block; margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px #000000;
+
+
+}
+
+#fileName {
+    margin-left: 5px;
+}
+
+.buttonContainer {
+    display: block; margin: 0 auto;
+    text-align: center;
+    width:55px;
+    display: inline-block;
+    align-items: center;
+    margin-left: 0px;
+    background-color: #E25914;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 0.8em;
+    cursor: pointer;
+    border:0;
+    outline:0;
+}
+
+.image-show {
+    text-align: center;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 70%;
+    height: 70%;
+}
+
+.img {
+    position: absolute;
+}

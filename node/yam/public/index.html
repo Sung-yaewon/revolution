@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+
+
+    <style>
+
+
+
+        .bar {
+            text-align: center;
+
+
+        }
+
+        .menu > ul {
+            display:flex;
+            flex-flow: row nowrap;
+            list-style: none;
+            padding-left: 50;
+            padding: 50;
+
+
+        }
+        @media screen and (max-width:768px){
+
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: wheat;
+            padding: 8xp 12xp;
+        }
+
+        .navbar_menu{
+            display: flex;
+            list-style: 0;
+            padding-left: 0;
+        }
+
+    }
+
+
+    </style>
+    <script>
+        const toggleBtn = document.querySelector('.navbar_togglebtn');
+        const menu = document.querySelector('.navbar_menu');
+        const icons =  document.querySelector('.navbaricons');
+    </script>
+
+<style>
+
+    *{margin:0;padding:0;}
+    ul,li{list-style:none;}
+    .slide{
+        text-align: center;
+        margin-top: 20px;
+        width:100%;
+        height:100%;
+        overflow:hidden;
+        margin-bottom: 50px;
+    }
+    /* width */
+    .slide ul{width:100%; height:100%;}
+    .slide li{width:100%; height:100%;}
+    .slide li:nth-child(1){background:#F4C444;}
+    .slide li:nth-child(2){background:#F4C444;}
+
+
+  </style>
+  <script>
+  const all = ele => document.querySelectorAll(ele)
+  const one = ele => document.querySelector(ele)
+  const slide = _ => {
+    const wrap = one('.slide') // .slide 선택
+    const target = wrap.children[0] // .slide ul 선택
+    const len = target.children.length // .slide li 갯수
+    // .slide ul의 너비 조정
+    target.style.cssText = `width:calc(100% * ${len});display:flex;transition:1s`
+    // .slide li의 너비 조정
+    Array.from(target.children)
+    .forEach(ele => ele.style.cssText = `width:calc(100% / ${len});`)
+    // 화면 전환 실행
+    let pos = 0
+    setInterval(() => {
+      pos = (pos + 1) % len // 장면 선택
+      target.style.marginLeft = `${-pos * 100}%`
+    }, 2500) // 1500 = 1500ms = 1.5sec. 즉, 1.5초 마다 실행
+  }
+  window.onload = function () {
+    slide()
+  }
+  </script>
+
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+<!-- 상단 -->
+<header>
+<div class="bar">
+    <a href="index.html">
+    <img  src="bar.png" width="60%" style="padding-bottom: 20px; padding-left: 55px;">
+    </a>
+
+    <!-- 로그인 -->
+            <div class="login" style="float: right; ">
+                <a href="login_page.html">
+                    <img src="login.png"  style="width:50%; float: left; padding-right: 15px; padding-top: 15px;">
+                </a>
+            </div>
+    </div>
+
+    <!-- 메뉴 -->
+    <nav class ="navbar">
+        <div class="header">
+        <ul class="header-gnb">
+          <li>
+            <div>
+                <a href="myyam.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000; ">
+                    My yam
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div>
+                <a href="today.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000; ">
+                    Today yam
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div>
+                <a href="month.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000; ">
+                    Month yam
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div>
+                <a href="analyze.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000;">
+                    Analyze
+                </a>
+            </div>
+          </li>
+
+        </ul>
+    </div>
+
+    <a href="#" class="nabar_tofflebtn">
+        <i class="fas fa-bars"></i>
+    </a>
+
+    </nav>
+
+
+    <script src="index.js"></script>
+
+
+
+</header>
+
+
+<!-- 배너-->
+<div class="slide">
+<ul>
+    <li ><img src="b1.png"> </li>
+    <li><img src="b2.png"></li>
+  </ul>
+</div>
+
+
+
+
+</body>
+</html>

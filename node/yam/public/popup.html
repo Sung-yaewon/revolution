@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script language="javascript">
+        function showPopup() {
+            onclick=self.close()
+            alert("저장되었습니다.")
+
+        }
+
+
+
+
+    </script>
+    <link rel="stylesheet" href="imginput.css">
+
+    <style>
+        table {
+            width: 80%;
+            border-top: 1px solid #ADADAD;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #F4C444;
+
+        }
+        th,td{
+            font-size: 12px;
+            padding: 15px;
+            border-bottom: 1px solid #ADADAD;
+            border-left: 1px solid #ADADAD ;
+
+        }
+
+        th:first-child, td:first-child{
+            border-left:none ;
+        }
+        td {
+            text-align: center;
+
+        }
+
+        okbutton {
+            width:55px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 0px;
+            background-color: #F4C444;
+            color: white;
+            border-radius: 15px;
+            padding: 10px;
+            font-size: 0.8em;
+            cursor: pointer;
+            border:0;
+            outline:0;
+
+        }
+
+    </style>
+</head>
+
+<body onload="window.resizeTo(600,600)">
+    <h3 style="text-align: center;"> 음식 정보 페이지 </h3>
+
+    <table align="center">
+        <tr>
+            <th> 음식명 </th>
+            <th> - </th>
+
+        </tr>
+
+        <tr>
+            <td> 칼로리 </td>
+            <td> - </td>
+
+        </tr>
+
+        <tr>
+            <td> 탄수화물 </td>
+            <td> - </td>
+
+        </tr>
+
+        <tr>
+            <td> 단백질 </td>
+            <td> - </td>
+
+        </tr>
+
+        <tr>
+            <td> 지방 </td>
+            <td> - </td>
+
+        </tr>
+    </table>
+
+
+
+    <form style="text-align: center;">
+
+        <p><input type="date" value="2021-01-13"></p>
+
+    </form>
+
+
+
+    <div class="image-show" id="image-show"></div>
+
+    <div class="okbutton" style="text-align: center; padding-top: 15px;">
+        <input name="savebutton" type="button" value="저장" onclick="showPopup();">
+        <input name="clearbutton" type="button" value="취소" onclick="self.close();">
+    </div>
+
+    <script src="index.js"></script>
+    <script src="dateinput.js"></script>
+</body>
+</html>

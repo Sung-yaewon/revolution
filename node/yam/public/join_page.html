@@ -1,0 +1,311 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content=" initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>login_page</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mairbar.css">
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    >
+
+  <style>
+  .submit_button {
+    margin: 0;
+    padding: 0.5rem 1rem;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+
+    display: inline-block;
+    width: auto;
+
+    border: none;
+    border-radius: 4px;
+    margin-left: 125px;
+    background:linear-gradient(to left, rgba(255, 156, 98, 0.925), rgba(255, 242, 185, 0.68));
+    }
+    </style>
+    <style>
+    .bar {
+      text-align: center;
+
+      }
+
+    .menu > ul {
+      display:flex;
+      flex-flow: row nowrap;
+      list-style: none;
+      padding-left: 50;
+      padding: 50;
+
+     }
+</style>
+
+<style>
+.submit_button {
+margin: 0;
+padding: 0.5rem 1rem;
+
+font-family: "Noto Sans KR", sans-serif;
+font-size: 1rem;
+font-weight: 400;
+text-align: center;
+text-decoration: none;
+
+display: inline-block;
+width: auto;
+
+border: none;
+border-radius: 8px;
+margin-left: 0px;
+background:#F4C444;
+color: #ffffff;
+}
+
+.form-group{
+  width :100%;
+  height : 50px;
+  font-size: 15px;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+}
+
+.header{
+  text-decoration: none;
+  color: #752424;
+  font-weight: 1000;
+
+}
+.header-gnb{
+  text-decoration: none;
+  color: #752424;
+  font-weight: 1000;
+
+}
+.header a::after{
+  font-family: 'GmarketSansMedium';
+  font-size: 5px;
+  color: #2e0012;
+  border-radius: 15px;
+  border : 2px solid #1f000c;
+}
+.header a::before{
+  font-family: 'GmarketSansMedium';
+  font-size: 5px;
+  color: #e84684;
+  border-radius: 15px;
+  border : 2px solid #e84684;
+}
+
+
+</style>
+
+<script>
+    function fn_submit() {
+        var text = document.getElementById('text').value;
+
+        var regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+        if (regEmail.test(text) == true) {
+            document.getElementById("emailCheck").innerHTML = '올바른 이메일 형식입니다.';
+			document.getElementById("emailCheck").style.color = "#008409";
+        }  else {
+				document.getElementById("emailCheck").innerHTML = '올바르지 않은 이메일 형식입니다.';
+				document.getElementById("emailCheck").style.color = "#d67049";
+			}
+    }
+
+    function pwCheck() {
+        var password = document.getElementById('password').value;
+        var password2 = document.getElementById('password2').value;
+
+        if (password != password2) {
+            document.getElementById("pwCheck").innerHTML = '비밀번호가 일치하지 않습니다.';
+	        document.getElementById("pwCheck").style.color = "#d67049";
+        } else {
+	         document.getElementById("pwCheck").innerHTML = '비밀번호가 일치합니다';
+	         document.getElementById("pwCheck").style.color = "#008409";
+	    }
+
+
+    }
+
+
+
+  </script>
+  </head>
+
+
+  <body>
+
+    <!-- 상단 -->
+
+    <div class="bar">
+      <a href="index.html">
+      <img  src="bar.png" width="60%" style="padding-bottom: 20px; padding-left: 55px;">
+      </a>
+
+  <!-- 로그인 -->
+          <div class="login" style="float: right; ">
+              <a href="login_page.html">
+                  <img src="login.png" width="55%" style="float: left; padding-right: 15px; padding-top: 15px;">
+              </a>
+          </div>
+  </div>
+      <!-- 메뉴 -->
+      <div class="header">
+          <ul class="header-gnb">
+            <li>
+              <div>
+                  <a href="myyam.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000; ">
+                      My yam
+                  </a>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                  <a href="today.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000; ">
+                      Today yam
+                  </a>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                  <a href="month.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000; ">
+                      Month yam
+                  </a>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                  <a href="analyze.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000; ">
+                      Analyze
+                  </a>
+              </div>
+            </li>
+
+          </ul>
+      </div>
+
+    <div class="container">
+            <div class="row mt-5">
+              <div class="col-12 text-center">
+                <h2 style="margin-top: 50px; margin-bottom: 20px;">SIGN UP</h2>
+              </div>
+            </div>
+
+            <div class="form-group" style="text-align: center;">
+                <input
+                  style="margin-top: 5px;width: 60%; height: 65%; outline-color: #ADADAD;"
+                  type="text"
+                  id="text"
+                  placeholder="  이메일"
+                  name="username"
+                  onkeyup="fn_submit()"
+                >
+                <div id="emailCheck"></div>
+            </div>
+
+            <div class="form-group" style="text-align: center;">
+                <input
+                  style="margin-top: 5px;width: 60%; height: 65%; outline-color: #ADADAD;"
+                  type="text"
+                  id="username"
+                  placeholder="  닉네임"
+                  name="username"
+                >
+            </div>
+
+            <div class="form-group" style="text-align: center;">
+              <input
+                style="margin-top: 5px;width: 60%; height: 65%; outline-color: #ADADAD;"
+                type="password"
+                id="password"
+                placeholder="  비밀번호"
+                name="password"
+              >
+            </div>
+
+            <div class="form-group" style="text-align: center;">
+                <input
+                  style="margin-top: 5px;width: 60%; height: 65%; outline-color: #ADADAD;"
+                  type="password"
+                  id="password2"
+                  placeholder="  비밀번호 확인"
+                  name="password2"
+                  onkeyup="pwCheck()"
+                >
+                <div id="pwCheck"></div>
+              </div>
+
+              <div class="form-group" style="text-align: center;">
+                <input
+                  style="margin-top: 5px;width: 60%; height: 65%; outline-color: #ADADAD;"
+                  type="password"
+                  id="password"
+                  placeholder="  나이"
+                  name="password"
+                >
+              </div>
+
+              <div class="form-group" style="text-align: center;">
+                <input
+                  style="margin-top: 5px;width: 60%; height: 65%; outline-color: #ADADAD;"
+                  type="password"
+                  id="password"
+                  placeholder="  키"
+                  name="password"
+                >
+              </div>
+
+              <div class="form-group" style="text-align: center;">
+                <input
+                  style="margin-top: 5px;width: 60%; height: 65%; outline-color: #ADADAD;"
+                  type="password"
+                  id="password"
+                  placeholder="  몸무게"
+                  name="password"
+                >
+              </div>
+
+              <div class="form-group">
+
+                <label for="gender" style="margin-right: 15px;">
+                <input
+                  style=" margin-top: 5px; width: 60%; height: 65%; outline-color: #ADADAD;"
+                  type="radio"
+                  class="form-control"
+                  name="gender"
+                  id="gender"
+                  value="man"> 남자 </label>
+
+                <label for="gender" style="margin-right: 15px;">
+                <input
+                  style="margin-top: 5px;width: 50%; height: 65%; outline-color: #ADADAD;"
+                  type="radio"
+                  class="form-control"
+                  name="gender"
+                  id="gender"
+                  value="woman">
+                  여자
+                </label>
+
+              <div style="text-align: center;">
+              <a href="#">
+                <button type="submit"  class="submit_button" style="margin-top: 10px;margin-bottom: 100px; text-align: center;">회원가입</button>
+              </a>
+              </div>
+          </div>
+  </body>
+</html>

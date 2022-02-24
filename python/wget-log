@@ -1,0 +1,11 @@
+--2022-01-11 07:41:30--  http://apis.data.go.kr/1471000/FoodNtrIrdntInfoService1/getFoodNtrItdntList1?serviceKey=3mKWpcqU6sKZVtaK0WjIQcg8WU5aHSCkGVwLilt%2FvWwE7TP9a0leTQfFtMzbUJmzsjelusNj3Q2XXX0VINWBMg%3D%3D
+Resolving apis.data.go.kr (apis.data.go.kr)... 27.101.215.194
+Connecting to apis.data.go.kr (apis.data.go.kr)|27.101.215.194|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4185 (4.1K) [application/xml]
+Saving to: ‘getFoodNtrItdntList1?serviceKey=3mKWpcqU6sKZVtaK0WjIQcg8WU5aHSCkGVwLilt%2FvWwE7TP9a0leTQfFtMzbUJmzsjelusNj3Q2XXX0VINWBMg==’
+
+                        getFoodNtrItdntList1?se   0%[                                                                                                     ]       0  --.-KB/s               getFoodNtrItdntList1?serviceKey=3mKWpcqU6sKZVta 100%[====================================================================================================>]   4.09K  --.-KB/s    in 0s      
+
+2022-01-11 07:41:30 (278 MB/s) - ‘getFoodNtrItdntList1?serviceKey=3mKWpcqU6sKZVtaK0WjIQcg8WU5aHSCkGVwLilt%2FvWwE7TP9a0leTQfFtMzbUJmzsjelusNj3Q2XXX0VINWBMg==’ saved [4185/4185]
+

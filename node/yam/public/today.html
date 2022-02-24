@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mairbar.css">
+
+    <title></title>
+     <style>
+        .bar {
+            text-align: center;
+
+        }
+
+        .menu > ul {
+            display:flex;
+            flex-flow: row nowrap;
+            list-style: none;
+            padding-left: 50;
+            padding: 50;
+            font-size: medium;
+        }
+
+        .current_date {
+            font-weight: bold;
+
+        }
+
+
+
+        table {
+            width: 80%;
+            border-top: 1px solid #ADADAD;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #F8EEE1;
+        }
+        th,td{
+            font-size: 12px;
+            padding: 15px;
+            border-bottom: 1px solid #ADADAD;
+            border-left: 1px solid #ADADAD ;
+
+        }
+
+        th:first-child, td:first-child{
+            border-left:none ;
+        }
+        td {
+            text-align: center;
+
+        }
+
+    </style>
+
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+</head>
+
+<body>
+
+    <!-- 상단 -->
+
+    <div class="bar">
+        <a href="index.html">
+        <img  src="bar.png" width="60%" style="padding-bottom: 20px; padding-left: 55px;">
+        </a>
+
+    <!-- 로그인 -->
+        <div class="login" style="float: right; ">
+        <a href="login_page.html">
+                    <img src="login.png" width="55%" style="float: left; padding-right: 15px; padding-top: 15px;">
+                </a>
+            </div>
+    </div>
+        <!-- 메뉴 -->
+        <div class="header">
+            <ul class="header-gnb">
+              <li>
+                <div>
+                    <a href="myyam.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000; ">
+                        My yam
+                    </a>
+                </div>
+              </li>
+
+              <li>
+                <div>
+                    <a href="today.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000; ">
+                        Today yam
+                    </a>
+                </div>
+              </li>
+
+              <li>
+                <div>
+                    <a href="month.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000; ">
+                        Month yam
+                    </a>
+                </div>
+              </li>
+
+              <li>
+                <div>
+                    <a href="analyze.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000; ">
+                        Analyze
+                    </a>
+                </div>
+              </li>
+
+            </ul>
+        </div>
+
+
+        <div id="current_date" style="font-weight: bold; text-align:center ; padding-top: 30px;"></p>
+            <script>
+            date = new Date();
+            year = date.getFullYear();
+            month = date.getMonth() + 1;
+            day = date.getDate();
+            document.getElementById("current_date").innerHTML = year + "년" + month + "월" + day + "일";
+            </script>
+        </div>
+
+        <hr>
+        <!--
+        <div class="listContainer">
+          <a href="./myinfo.html" class="item">
+              <div class="icon"></div>
+              <div class="text" style="font-weight: bold;font-size: large;">리코타치즈 샐러드</div><br>
+          </a>
+          <a href="./myinfo.html" class="item">
+              <div class="text">180kal</div>
+              <div class="right"> > </div>
+          </a>
+        </div>
+        -->
+
+        <table align="center">
+            <tr style="color: white;">
+              <th> 분류 </th>
+              <th> 음식명 </th>
+              <th> 칼로리 </th>
+              <th> 탄수화물 </th>
+              <th> 단백질 </th>
+              <th> 지방 </th>
+            </tr>
+
+            <tr>
+                <td> 01/13 </td>
+                <td> 리코타치즈 샐러드 </td>
+                <td> 180kal </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+            </tr>
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

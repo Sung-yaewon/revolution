@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mairbar.css">
+    <link rel="stylesheet" href="imginput.css">
+
+
+    <title></title>
+    <style>
+        .bar {
+            text-align: center;
+
+        }
+
+        .menu > ul {
+            display:flex;
+            flex-flow: row nowrap;
+            list-style: none;
+            padding-left: 50;
+            padding: 50;
+
+        }
+
+        input:-ms-input-placeholder {color: #a8a8a8;}
+        input::-webkit-input-placeholder {color: #a8a8a8;}
+        input::-moz-placeholder {color: #a8a8a8;}
+
+        .textinput {
+            display: block; margin: 0 auto;
+            height: 40px;
+            width: 400px;
+            border: 4px solid #E25914;
+            background: #ffffff;
+        }
+        .input {
+
+            align-items: center;
+            font-size: 13px;
+            font-weight: 100;
+            width: 325px;
+            padding: 10px;
+            border: 0px;
+            outline: none;
+
+        }
+
+        .button2{
+            margin-top:0;
+            text-align: center;
+            align-items: center;
+            width: 40px;
+            height: 105%;
+            border: 0px;
+            background: #E25914;
+            outline: 0px;
+            float: right;
+            color:#ffffff;
+        }
+
+
+    </style>
+
+    <script language="javascript">
+        function showPopup() {
+             window.open(popup.html", "영양정보 확인", "width=400, height=300, left=100, top=50");
+            }
+
+    </script>
+
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+</head>
+<body>
+
+    <!-- 상단 -->
+
+    <div class="bar">
+        <a href="index.html">
+        <img  src="bar.png" width="60%" style="padding-bottom: 20px; padding-left: 55px;">
+        </a>
+
+    <!-- 로그인 -->
+            <div class="login" style="float: right; ">
+                <a href="login_page.html">
+                    <img src="login.png" width="55%" style="float: left; padding-right: 15px; padding-top: 15px;">
+                </a>
+            </div>
+    </div>
+
+        <!-- 메뉴 -->
+        <div class="header">
+            <ul class="header-gnb">
+              <li>
+                <div>
+                    <a href="myyam.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000; ">
+                        My yam
+                    </a>
+                </div>
+              </li>
+
+              <li>
+                <div>
+                    <a href="today.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000; ">
+                        Today yam
+                    </a>
+                </div>
+              </li>
+
+              <li>
+                <div>
+                    <a href="month.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000; ">
+                        Month yam
+                    </a>
+                </div>
+              </li>
+
+              <li>
+                <div>
+                    <a href="analyze.html" style="text-decoration: none; color: #ADADAD; font-weight: 1000;">
+                        Analyze
+                    </a>
+                </div>
+              </li>
+
+            </ul>
+        </div>
+
+
+    <!--검색창 -->
+    <div style="text-align: center;">
+        <div class="textinput" style=" margin-top: 30px; margin-bottom: 0;">
+            <input class="input" name="food_search"  type="text" placeholder="음식 검색">
+            <button class="button2" name="search_button2">검색</button>
+        </div>
+    </div>
+
+    <hr style="margin-top: 30px; margin-bottom: px;">
+
+    <!--사진 입력 -->
+    <div class="container">
+
+            <form method="post" enctype="multipart/form-data">
+                <div class="button">
+                    <label for="chooseFile">
+                        <img src="imgupload.PNG" width=100% style="padding-top: 0%;">
+                    </label>
+                </div>
+                <input type="file" id="chooseFile" name="chooseFile" accept="image" onchange="loadFile(this)">
+            </form>
+
+<!-- 사진 입력 & 팝업-->
+
+<div class="fileContainezr">
+    <div class="inputbox">
+        <div class="fileInput" style=" text-align: center; border: 1px solid #8a8a8a; padding: 4px; color:rgb(105, 105, 105)">
+            <p>  FILE NAME: </p>
+                <p id="fileName"></p>
+        </div>
+    <div style="  padding-top:20px ;">
+        <div class="buttonContainer" type="button" value="submit"onclick="showPopup();" >
+            <div class="submitButton" id="submitButton">SUBMIT</div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="image-show" id="image-show"></div>
+</div>-->
+
+
+
+
+    <script src="index.js"></script>
+    <script src="layer.js"></script>
